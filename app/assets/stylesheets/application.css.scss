@@ -1,0 +1,115 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+ */
+@import "bootstrap";
+
+.input-group .form-control { 
+    width: 200px;
+}
+
+.header {
+    background-color: #8FBC8F;
+}
+
+.row {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    height: 53px;
+}
+
+.navbar {
+     margin-bottom: 0px;
+}
+
+#cerrency-ch {
+    padding-top: 0px;
+    height: 120px;
+    margin-left: 357px;
+    display: none;    
+}
+
+.navbar-default { 
+    background-color: #8FBC8F;
+    border-bottom-color: #8FBC8F;
+    border-left-color: #8FBC8F;
+    border-right-color: #8FBC8F;
+    border-top-color: #8FBC8F;
+}
+
+.navbar-default .navbar-nav > li > a:hover { 
+    background-color: #9FBC9F;
+    color: #333333;
+}
+
+.navbar-default .navbar-nav > li > a:focus { 
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+footer {
+    clear: left;
+    text-align: center;
+}
+
+.tel {
+   width: 120px; 
+}
+
+.container { 
+    width: 970px;
+}
+
+.head {
+    font-weight: bold;
+    color: #000000;
+    font-size: 1.3em; 
+    padding-left: 50px;
+    padding-top: 0px;
+}
+
+.menu_2 {
+    padding-left: 50px;
+}
+
+h1 {
+   font-size: 1.8em;  
+   text-align: center;
+   padding-bottom: 10px;
+}
+
+.form-inline {
+    margin-bottom: 21px;
+}
+
+.form-control {
+    margin-right: 92px;
+	
+}
+
+#tab {
+    min-height: 630px;
+}
+
+#currency-s {
+	width: 200px;
+}
+
+#type-s {
+	width: 200px;
+}
+
+#region-s {
+	width: 200px;
+}
+

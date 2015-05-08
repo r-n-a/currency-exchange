@@ -1,0 +1,15 @@
+<% provide(:title, 'All users') %>
+<hr>
+<div class="clinic-show">
+<h1>All users</h1>
+	<table>
+	  <% @users.each do |user| %>
+			<tr>
+				<td><b><%=  user.username %> </b> (<%=  user.email %>) &nbsp;&nbsp;</td>
+				<td width=50px><%= link_to "Clinic", clinics_path(user) %></td>
+				<td width=50px><%= link_to "Edit", edit_user_registration_path %></td>
+				<td width=50px> <%= link_to "Destroy", destroy_user_path(user), method: :delete, data: { confirm: "You sure?" } %></td>
+			</tr>
+	  <% end %>
+	</table>
+</div>

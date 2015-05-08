@@ -6,9 +6,9 @@ group :development, :test do
 	gem 'sqlite3'
 	gem "rspec-rails", '~> 2.14.0.rc1'
 	gem 'capistrano'
-  gem 'capistrano-rails'
-  gem 'capistrano-bundler'
-  gem 'capistrano-rvm'
+	gem 'capistrano-rails'
+	gem 'capistrano-bundler'
+	gem 'capistrano-rvm'
 end
 
 group :test do
@@ -23,13 +23,13 @@ group :production do
 	gem 'unicorn'
 end
 
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails', '>= 3.2'
 gem 'uglifier', '>= 1.3.0'
 #gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
-gem 'bootstrap-sass', '2.3.2.0'
+gem 'bootstrap-sass', '~> 3.3.4'
 gem 'bcrypt-ruby', '3.1.2'
 gem 'faker', '1.1.2'
 gem 'will_paginate', '3.0.4'
@@ -41,6 +41,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'geokit-rails'
 gem 'yaml_db'
+gem 'sprockets-rails'
 
 group :doc do
 	gem 'sdoc', '~> 0.4.0', require: false

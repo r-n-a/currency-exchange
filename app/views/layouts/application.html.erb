@@ -1,14 +1,166 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE HTML>
 <html>
-<head>
-  <title>CurrencyExchange</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+	<head>
+		<%= stylesheet_link_tag "application", media: "all",
+                                           "data-turbolinks-track" => true %>
+		<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+		<%= csrf_meta_tags %>
+		<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<title>Applications for purchase/sale of currency</title>
+	</head>
 
-<%= yield %>
+	<body>
+		<div class="wrapper container">
+			<header>
+				<div class="row header">
+					<div class="col-md-2 head">Currency <br/>exchange</div>
+					<div class="col-md-3 menu_1">
+						<nav class="navbar navbar-default">
+							<ul class="nav navbar-nav">
+								<li><a href="/home/">Home</a></li>
+								<li><a href="/about/">About</a></li>
+								<li><a href="/services/">Blog</a></li>		
+							</ul>
+						</nav>
+					</div>
+					<div class="col-md-2 col-md-offset-0 cerrency">
+						<nav class="navbar navbar-default">
+							<ul id="cerrency" class="nav navbar-nav">
+								<li><a href="#">Exchange rate</a></li>		
+							</ul>
+						</nav>
+					</div>
+					<div class="col-md-3  col-md-offset-2 menu_2">
+						<nav class="navbar navbar-default">
+							<ul class="nav navbar-nav">
+								<li><a href="/home/">Home</a></li>
+								<li ><a href="/about/">About us</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<div id="cerrency-ch">
+					<!-- Minfin.com.ua currency informer 215x120 green-->
+					<div id="minfin-informer-m1Fn-currency">Load <a href="http://minfin.com.ua/currency/" target="_blank">Exchange</a> from minfin.com.ua</a></div>
+					<script type="text/javascript">
+					var iframe = '<ifra'+'me width="215" height="120" fram'+'eborder="0" src="http://informer.minfin.com.ua/gen/course/?color=marine" vspace="0" scrolling="no" hspace="0" allowtransparency="true"style="width:215px;height:120px;ove'+'rflow:hidden;"></iframe>';var cl = 'minfin-informer-m1Fn-currency';document.getElementById(cl).innerHTML = iframe; 
+					</script>
+					<noscript>
+					<img src="http://informer.minfin.com.ua/gen/img.png" width="1" height="1" alt="minfin.com.ua: currency" title="Exchange rate" border="0" />
+					</noscript>
+					<!-- Minfin.com.ua currency informer 215x120 green-->
+				</div>
+			</header>
+			<div id="content">
+				<h1>Applications for purchase/sale of currency</h1>
+				<form name="search" action="#" method="get" class="form-inline form-search pull-left">
+				 <div class="row>
+					<div class="input-group">
+						<select class="form-control" id="currency-s" name="currency-s1">
+							<option value="value1">Currency</option>
+							<option value="value2">value2</option>
+						</select>
+						<select class="form-control" id="type-s" name="type-s">
+							<option value="value1">Type</option>
+							<option value="value2">value2</option>
+						</select>
+						<select class="form-control" id="region-s" name="region-s">
+							<option value="value1">Region</option>
+							<option value="value2">value2</option>
+						</select>
+						 <button type="submit" class="btn btn-primary">GO</button>
+					</div>
+				</div>	
+				</form>
+				<div id="tab">
+				<table class="table table-bordered table-striped">
+					<thead>
+					  <tr>
+						<th>Time</th>
+						<th>Type</th>
+						<th>Currency</th>
+						<th>Course</th>
+						<th>Sum</th>
+						<th>Region</th>
+						<th class="tel">Tel.</th>
+					  </tr>
+					</thead>
+					<tbody>
+					  <tr>
+						<td>4th May</td>
+						<td>Buy</td>
+						<td>EURO</td>
+						<td>24.00</td>
+						<td>200</td>
+						<td>Kiev</td>
+						<td>(066) 413-7962</td>
+					  </tr>
+					  <tr>
+						<td>4th May</td>
+						<td>Buy</td>
+						<td>EURO</td>
+						<td>24.00</td>
+						<td>200</td>
+						<td>Kiev</td>
+						<td>(066) 413-7962</td>
+					  </tr>
+					  <tr>
+						<td>4th May</td>
+						<td>Buy</td>
+						<td>EURO</td>
+						<td>24.00</td>
+						<td>200</td>
+						<td>Kiev</td>
+						<td>(066) 413-7962</td>
+					  </tr>
+					  <tr>
+						<td>4th May</td>
+						<td>Buy</td>
+						<td>EURO</td>
+						<td>24.00</td>
+						<td>200</td>
+						<td>Kiev</td>
+						<td>(066) 413-7962</td>
+					  </tr>
+					  <tr>
+						<td>4th May</td>
+						<td>Buy</td>
+						<td>EURO</td>
+						<td>24.00</td>
+						<td>200</td>
+						<td>Kiev</td>
+						<td>(066) 413-7962</td>
+					  </tr>
+					  <tr>
+						<td>4th May</td>
+						<td>Buy</td>
+						<td>EURO</td>
+						<td>24.00</td>
+						<td>200</td>
+						<td>Kiev</td>
+						<td>(066) 413-7962</td>
+					  </tr>
+					  <tr >
+						<td>4th May</td>
+						<td>Buy</td>
+						<td>EURO</td>
+						<td>24.00</td>
+						<td>200</td>
+						<td>Kiev</td>
+						<td>(066) 413-7962</td>
+					  </tr>
+					</tbody>
+				  </table>
+				  </div>
+				  <%= yield %>
+			</div>
+			<hr/>
+			<footer>
+				<div class="col-md-2 col-md-offset-5" >©2015<br/>All rights reserved</div>
+			</footer>
+		</div> 
+	</body>
 
-</body>
 </html>

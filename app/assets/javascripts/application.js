@@ -10,7 +10,22 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require bootstrap
 //= require jquery
 //= require jquery_ujs
+
 //= require turbolinks
 //= require_tree .
+$(document).ready(function() {
+    $('#cerrency').click(function(){
+            if ( $('#cerrency-ch').css('display') == 'none' ) {
+                $('#cerrency-ch').animate({height: 'show'}, 400);
+            } else {
+                $('#cerrency-ch').animate({height: 'hide'}, 200);
+            }
+       } 
+    );
+});
+
+
+
