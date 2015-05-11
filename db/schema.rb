@@ -11,10 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150505200631) do
+ActiveRecord::Schema.define(version: 20150510122941) do
 
   create_table "advertisements", force: :cascade do |t|
-    t.integer  "type"
+    t.string   "typec"
     t.string   "currency"
     t.float    "course"
     t.integer  "sum"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20150505200631) do
     t.string   "tel"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
   end
 
   create_table "users", force: :cascade do |t|

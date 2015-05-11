@@ -1,0 +1,63 @@
+<% provide(:title, 'All advertisements') %>
+<div class="clinic-show">
+<h1>All advertisements</h1>
+	 <form name="search" action="/search" method="get" class="form-inline form-search pull-left">
+                <div class="input-group">
+                    <select class="form-control" id="currency-s" name="currencys">
+						<option value="USD">USD</option>
+                        <option value="EUR">EUR</option>
+						<option value="RUB">RUB</option>
+                    </select>
+                    <select class="form-control" id="type-s" name="types">
+                        <option value="Buy">Buy</option>
+                        <option value="Sell">Sell</option>
+                    </select>
+                    <select class="form-control" id="region-s" name="regions">
+                        <option value="Kiev">Kiev</option>
+                        <option value="Dnepropetrovsk">Dnepropetrovsk</option>
+						<option value="Donetsk">Donetsk</option>
+                        <option value="Zaporozhye">Zaporozhye</option>
+						<option value="Lviv">Lviv</option>
+                        <option value="Kharkiv">Kharkiv</option>
+                    </select>
+                     <button type="submit" class="btn btn-primary">GO</button>
+                </div>
+           </form>
+	<div id="tab">
+            <table class="table table-bordered table-striped">
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Type</th>
+                    <th>Currency</th>
+                    <th class="course" >Course </th>
+                    <th>Sum</th>
+                    <th>Region</th>
+                    <th class="tel">Tel.</th>
+					<% if user_signed_in? && current_user.username == "Admin"%>
+					<th class="action" >Action</th>
+					<% end %>
+                  </tr>
+                </thead>
+                <tbody>
+				 <% @advertisements.each do |advertisement| %>
+                 <tr>
+                    <td><%= advertisement.created_at.to_date  %></td>
+                    <td><%=  advertisement.typec  %></td>
+                    <td><%= advertisement.currency  %></td>
+                    <td><%= advertisement.course  %></td>
+                    <td><%= advertisement.sum  %></td>
+                    <td><%= advertisement.region  %></td>
+                    <td> <%=  advertisement.user.username %><br/> <%= advertisement.tel  %></td>
+					<% if user_signed_in? && current_user.username == "Admin"%>
+					<td>
+						<%= link_to "Edit", edit_advertisement_path(advertisement) %>&nbsp;&nbsp;&nbsp;
+						<%=  link_to "Delete", destroy_advertisement_path(advertisement), method: :delete, data: { confirm: "You sure?" }  %>
+					</td>
+					<% end %>
+                  </tr>
+				   <% end %>
+                </tbody>
+              </table>
+         </div>
+</div>

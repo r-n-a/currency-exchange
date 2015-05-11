@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
 
 	devise_for :users
-	root  'users#index'
+	root  'advertisements#index'
+	resources :advertisements
+	match '/adv-of-user/',  to: 'advertisements#index_of_user',   via: 'get'
+	match '/search/',  to: 'advertisements#search',   via: 'get'
+	match 'users/:id' => 'users#destroy', :via => :delete, :as => :destroy_user
+	match 'advertisements/:id' => 'advertisements#destroy', :via => :delete, :as => :destroy_advertisement
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

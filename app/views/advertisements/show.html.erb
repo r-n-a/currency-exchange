@@ -1,0 +1,30 @@
+<% provide(:title, @advertisement .typec) %>
+
+<div class="advertisement-show">
+ 
+			<h1><%= @advertisement .typec %></h1>
+
+
+			<p class="advertisement-typec"><%= @advertisement .typec %></p>
+
+
+			<p class="advertisement-typec"><%= @advertisement .adress %></p>
+
+			
+			<p class="advertisement-typec"><%= @advertisement .tel %></p>
+
+			
+			<p class="advertisement-typec"><%= @advertisement .zipcode %></p>
+
+			
+			<p class="advertisement-typec">User: <%= @advertisement .user.email %></p>
+				
+			<p class="advertisement-typec"><%= link_to "Edit", edit_clinic_path %>	&nbsp;&nbsp;&nbsp;&nbsp;
+												   <%= link_to "Procedures list", procedures_path %>	&nbsp;&nbsp;&nbsp;&nbsp;
+												   <%= link_to "New procedure", new_procedure_path %>
+												   
+			</p>
+			
+</div>
+
+

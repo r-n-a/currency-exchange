@@ -1,0 +1,38 @@
+<% provide(:title, 'All advertisements') %>
+<div class="advertisement-show">
+<h1>All advertisements</h1>
+		<div id="tab">
+            <table class="table table-bordered table-striped">
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Type</th>
+                    <th>Currency</th>
+                    <th>Course</th>
+                    <th>Sum</th>
+                    <th>Region</th>
+                    <th class="tel">Tel.</th>
+					<th class="action" >Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+				 <% @advertisements.each do |advertisement| %>
+                 <tr>
+                    <td><%= advertisement.created_at.to_date  %></td>
+                    <td><%= link_to advertisement.typec, advertisement %></td>
+                    <td><%= advertisement.currency  %></td>
+                    <td><%= advertisement.course  %></td>
+                    <td><%= advertisement.sum  %></td>
+                    <td><%= advertisement.region  %></td>
+                    <td><%= advertisement.tel  %></td>
+				
+					<td>
+						<%= link_to "Edit", edit_advertisement_path(advertisement) %>&nbsp;&nbsp;&nbsp;
+						<%=  link_to "Delete", destroy_advertisement_path(advertisement), method: :delete, data: { confirm: "You sure?" }  %>
+					</td>
+				  </tr>
+				   <% end %>
+                </tbody>
+              </table>
+         </div>
+</div>

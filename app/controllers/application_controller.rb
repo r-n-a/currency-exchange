@@ -5,11 +5,11 @@ class ApplicationController < ActionController::Base
 	protect_from_forgery with: :exception
   
 	 def after_sign_in_path_for(resource)
-		new_advertisement_path
+		adv_of_user_path
 	end
 	
 	def after_sign_out_path_for(resource_or_scope)
-		root_url
+		advertisements_path
 	end
 	
 	def configure_permitted_parameters
